@@ -1,0 +1,21 @@
+CareNest feature update patch
+
+1. BACK UP your current project folder before replacing anything.
+2. Extract this ZIP directly into the folder that contains manage.py (the inner hospitalmanagement-master folder).
+3. Allow Windows to replace existing files and merge folders.
+4. Keep your existing .venv and db.sqlite3. Do not delete your local .env file.
+5. Open PowerShell in the folder containing manage.py and run:
+
+   .\.venv\Scripts\Activate.ps1
+   python manage.py check
+   python manage.py migrate
+   python manage.py test hospital
+   python manage.py runserver
+
+The update adds migration 0019_carenest_workflows.py. Apply migrations before opening the updated appointment pages.
+
+
+Logout fix included in this version:
+- Logout now uses a CSRF-protected POST form on Admin, Doctor, Patient, and approval-waiting pages.
+- The route is `/logout/`; successful logout redirects to the public homepage.
+- Direct GET requests to `/logout/` are intentionally rejected by Django.

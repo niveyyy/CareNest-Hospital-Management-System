@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  footer.site-footer { padding: 36px 0 18px; margin: 0; text-align: center; }
+  footer.site-footer .brand { font-size: 1.3rem; font-weight: 700; letter-spacing: .4px; }
+  footer.site-footer .brand img { height: 30px; vertical-align: middle; margin-right: 8px; }
+  footer.site-footer .tag { opacity: .8; font-size: .9rem; margin: 6px 0 0; }
+  footer.site-footer .social a {
+    display: inline-block; width: 44px; height: 44px; line-height: 44px; margin: 16px 5px 4px;
+    border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 18px;
+    text-align: center; text-decoration: none; transition: all .2s ease;
+  }
+  footer.site-footer .social a:hover { background: #14b8a6; transform: translateY(-3px); }
+  /* some pages have global .fa rules (width, background, margin) - neutralise them for footer icons */
+  footer.site-footer .social a i.fa {
+    background: none !important; width: auto !important; height: auto !important; margin: 0 !important;
+    padding: 0 !important; font-size: 18px !important; line-height: inherit !important; border-radius: 0 !important;
+  }
+  footer.site-footer .copy { opacity: .75; font-size: .82rem; margin-top: 14px; }
+</style>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="brand"><img src="{% static 'images/logo.svg' %}" alt="">CareNest</div>
+    <p class="tag">Caring for you, every step of the way.</p>
+
+    <!-- TODO: put your own social links here -->
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+
+    <p class="copy">&copy; 2026 CareNest Hospital Management System</p>
+  </div>
+</footer>

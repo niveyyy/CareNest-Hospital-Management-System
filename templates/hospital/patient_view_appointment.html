@@ -1,0 +1,11 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+<div class="container" style="margin:35px auto;">
+  <div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">My Appointments</h3></div>
+    <div class="table-responsive"><table class="table table-hover"><thead><tr><th>Doctor</th><th>Reason</th><th>Scheduled date</th><th>Time</th><th>Status</th></tr></thead><tbody>
+    {% for appointment in appointments %}<tr><td>{{ appointment.doctorName }}</td><td>{{ appointment.description }}</td><td>{{ appointment.scheduled_date }}</td><td>{{ appointment.scheduled_time|default:'—' }}</td><td><span class="label {% if appointment.workflow_status == 'APPROVED' %}label-success{% elif appointment.workflow_status == 'COMPLETED' %}label-primary{% else %}label-warning{% endif %}">{{ appointment.get_workflow_status_display }}</span></td></tr>
+    {% empty %}<tr><td colspan="5" class="text-center">You have not booked any appointments yet.</td></tr>{% endfor %}
+    </tbody></table></div>
+  </div>
+</div>
+{% endblock content %}

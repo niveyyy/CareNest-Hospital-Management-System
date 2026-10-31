@@ -1,0 +1,9 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+<div class="container" style="margin:55px auto;max-width:900px;">
+  <div class="row">
+    <div class="col-md-6"><div class="panel panel-primary"><div class="panel-body"><h3>Appointment Requests</h3><p>Review incoming patient requests and approve, reject, or complete appointments.</p><a class="btn btn-primary" href="/doctor-view-appointment">Open appointments</a></div></div></div>
+    <div class="col-md-6"><div class="panel panel-success"><div class="panel-body"><h3>Availability</h3><p>Set the days and time ranges when patients can request an appointment.</p><a class="btn btn-success" href="/doctor-availability">Manage availability</a></div></div></div>
+  </div>
+</div>
+{% endblock content %}

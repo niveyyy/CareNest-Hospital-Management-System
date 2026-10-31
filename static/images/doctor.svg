@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ccfbf1"/><stop offset="1" stop-color="#99f6e4"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#d)"/>
+  <circle cx="80" cy="60" r="60" fill="#fff" opacity="0.4"/>
+  <g fill="#fff" opacity="0.6"><path d="M330 40h14v14h14v14h-14v14h-14V68h-14V54h14z"/><path d="M52 200h10v10h10v10H62v10H52v-10H42v-10h10z"/></g>
+  <!-- coat -->
+  <path d="M95 300c0-58 40-88 105-88s105 30 105 88z" fill="#fff"/>
+  <path d="M200 212l-38 30 38 58 38-58z" fill="#e2f3f1"/>
+  <path d="M200 212l-24 44 24 44 24-44z" fill="#0b6e8a"/>
+  <!-- neck + head -->
+  <rect x="184" y="178" width="32" height="36" rx="10" fill="#e9b48b"/>
+  <ellipse cx="200" cy="138" rx="46" ry="52" fill="#f2c29c"/>
+  <!-- hair -->
+  <path d="M152 134c-6-46 28-70 62-64 30 5 40 30 34 62-10-22-26-30-48-30-20 0-36 10-48 32z" fill="#2f2a2a"/>
+  <!-- face -->
+  <circle cx="182" cy="142" r="4.5" fill="#2f2a2a"/><circle cx="218" cy="142" r="4.5" fill="#2f2a2a"/>
+  <path d="M186 164q14 12 28 0" fill="none" stroke="#b45f4d" stroke-width="4" stroke-linecap="round"/>
+  <!-- stethoscope -->
+  <path d="M150 220c-6 40 8 66 36 66 22 0 30-18 30-34" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <path d="M250 220c6 40-8 56-30 56" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="216" cy="250" r="12" fill="#94a3b8" stroke="#334155" stroke-width="5"/>
+  <!-- badge -->
+  <rect x="244" y="240" width="38" height="22" rx="5" fill="#e0f2fe"/><path d="M259 245h8v5h5v8h-5v4h-8v-4h-5v-8h5z" fill="#0b6e8a" transform="scale(.8) translate(65 62)"/>
+</svg>

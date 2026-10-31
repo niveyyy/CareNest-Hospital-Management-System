@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a3d4f"/><stop offset="0.55" stop-color="#0b6e8a"/><stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <g id="plus"><path d="M-10-30h20v20h20v20H10v20h-20V10h-20v-20h20z"/></g>
+  </defs>
+  <rect width="1600" height="640" fill="url(#bg)"/>
+  <circle cx="1350" cy="120" r="260" fill="#fff" opacity="0.06"/>
+  <circle cx="1480" cy="520" r="180" fill="#fff" opacity="0.07"/>
+  <circle cx="140" cy="560" r="220" fill="#fff" opacity="0.05"/>
+  <g fill="#fff" opacity="0.10">
+    <use href="#plus" transform="translate(180 110) scale(1.4)"/>
+    <use href="#plus" transform="translate(520 80) scale(0.8)"/>
+    <use href="#plus" transform="translate(900 150) scale(1.1)"/>
+    <use href="#plus" transform="translate(1180 330) scale(1.6)"/>
+    <use href="#plus" transform="translate(360 470) scale(1)"/>
+    <use href="#plus" transform="translate(760 540) scale(0.7)"/>
+  </g>
+  <path d="M0 470h330l40-70 60 150 70-220 60 140 40-50h210l45-80 55 160 60-110 35 40h655" fill="none" stroke="#fff" stroke-opacity="0.28" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

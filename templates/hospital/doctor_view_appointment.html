@@ -1,0 +1,14 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+<div class="container" style="margin:35px auto;">
+  {% if messages %}{% for message in messages %}<div class="alert alert-{{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+  <div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">Appointment Requests</h3></div>
+    <div class="table-responsive"><table class="table table-hover"><thead><tr><th>Patient</th><th>Reason</th><th>Date</th><th>Time</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    {% for appointment, patient in appointments %}<tr><td>{{ appointment.patientName }}</td><td>{{ appointment.description }}</td><td>{{ appointment.scheduled_date }}</td><td>{{ appointment.scheduled_time|default:'—' }}</td><td>{{ appointment.get_workflow_status_display }}</td><td>
+      {% if appointment.workflow_status == 'PENDING' %}<form method="post" action="{% url 'doctor-update-appointment-status' appointment.pk %}" style="display:inline;">{% csrf_token %}<button class="btn btn-success btn-xs" name="action" value="approve">Approve</button> <button class="btn btn-danger btn-xs" name="action" value="reject">Reject</button></form>
+      {% elif appointment.workflow_status == 'APPROVED' %}<form method="post" action="{% url 'doctor-update-appointment-status' appointment.pk %}" style="display:inline;">{% csrf_token %}<button class="btn btn-primary btn-xs" name="action" value="complete">Mark completed</button></form>{% else %}—{% endif %}
+    </td></tr>{% empty %}<tr><td colspan="6" class="text-center">No appointment requests found.</td></tr>{% endfor %}
+    </tbody></table></div>
+  </div>
+</div>
+{% endblock content %}

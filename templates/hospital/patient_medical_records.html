@@ -1,0 +1,8 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+<div class="container" style="margin:35px auto;">
+  <div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">My Medical Records</h3></div><div class="panel-body">
+  {% for record in records %}<div class="panel panel-default"><div class="panel-heading"><strong>{{ record.diagnosis }}</strong> <span class="pull-right">{{ record.created_at|date:'d M Y, h:i A' }}</span></div><div class="panel-body"><p><strong>Doctor:</strong> {{ record.doctor.get_name }}</p><p><strong>Prescription:</strong><br>{{ record.prescription|linebreaksbr }}</p>{% if record.notes %}<p><strong>Notes:</strong><br>{{ record.notes|linebreaksbr }}</p>{% endif %}</div></div>{% empty %}<p>No medical records are available yet. Your doctor can add them after consultation.</p>{% endfor %}
+  </div></div>
+</div>
+{% endblock content %}
